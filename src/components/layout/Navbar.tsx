@@ -30,7 +30,7 @@ const Navbar = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-40 transition-all duration-300 ${
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         isAtTop ? 'py-6 bg-transparent' : 'py-4 bg-white shadow-md'
       }`}
     >
@@ -40,8 +40,9 @@ const Navbar = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
+          style={{ position: 'relative', zIndex: 51 }}
         >
-          <Link href="/" className="flex items-center">
+          <Link href="/" className="flex items-center relative">
             {/* Temporary text logo instead of image */}
             <div className="text-2xl font-bold text-primary">
               YUTAKA FARM
@@ -50,7 +51,7 @@ const Navbar = () => {
         </motion.div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden lg:flex space-x-8">
+        <nav className="hidden lg:flex space-x-8 relative z-51" style={{ pointerEvents: 'auto' }}>
           {navLinks.map((link, index) => (
             <motion.div
               key={link.name}
@@ -61,6 +62,7 @@ const Navbar = () => {
               <Link
                 href={link.href}
                 className="font-medium text-neutral-700 hover:text-primary transition-colors relative group"
+                style={{ pointerEvents: 'auto' }}
               >
                 {link.name}
                 <span className="absolute -bottom-1 left-0 h-0.5 bg-primary w-0 group-hover:w-full transition-all duration-300"></span>
@@ -74,7 +76,8 @@ const Navbar = () => {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          className="hidden lg:block"
+          className="hidden lg:block relative z-51"
+          style={{ pointerEvents: 'auto' }}
         >
           <Link href="/wholesale" className="btn btn-primary">
             Inquire Now
@@ -82,7 +85,7 @@ const Navbar = () => {
         </motion.div>
 
         {/* Mobile Menu Button */}
-        <div className="lg:hidden">
+        <div className="lg:hidden" style={{ position: 'relative', zIndex: 51, pointerEvents: 'auto' }}>
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="text-neutral-700 focus:outline-none"
@@ -116,6 +119,7 @@ const Navbar = () => {
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
             className="lg:hidden bg-white shadow-lg overflow-hidden"
+            style={{ position: 'relative', zIndex: 51, pointerEvents: 'auto' }}
           >
             <div className="container mx-auto px-4 py-4">
               <nav className="flex flex-col space-y-3">
@@ -130,6 +134,7 @@ const Navbar = () => {
                       href={link.href}
                       onClick={() => setIsMobileMenuOpen(false)}
                       className="block py-2 font-medium text-neutral-700 hover:text-primary transition-colors"
+                      style={{ pointerEvents: 'auto' }}
                     >
                       {link.name}
                     </Link>
@@ -145,6 +150,7 @@ const Navbar = () => {
                     href="/wholesale"
                     onClick={() => setIsMobileMenuOpen(false)}
                     className="btn btn-primary w-full"
+                    style={{ pointerEvents: 'auto' }}
                   >
                     Inquire Now
                   </Link>

@@ -26,7 +26,7 @@ export default function Home() {
     <>
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center py-16 md:py-24">
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-accent/10 -z-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-accent/10 -z-10 pointer-events-none"></div>
         
         {/* Hero Content */}
         <div className="container mx-auto px-4 md:px-6">
@@ -36,6 +36,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
+              style={{ position: 'relative', zIndex: 2 }}
             >
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-6 leading-tight">
                 Nigeria's Premier Agricultural Excellence
@@ -46,10 +47,10 @@ export default function Home() {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link href="/wholesale" className="btn btn-primary">
+                <Link href="/wholesale" className="btn btn-primary" style={{ position: 'relative', zIndex: 3, pointerEvents: 'auto' }}>
                   Inquire Now
                 </Link>
-                <Link href="/about" className="btn btn-outline">
+                <Link href="/about" className="btn btn-outline" style={{ position: 'relative', zIndex: 3, pointerEvents: 'auto' }}>
                   Learn More
                 </Link>
               </div>

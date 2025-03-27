@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import Spinach2 from '../../../public/images/products/spinach2.jpg'
 
 // Animation variants
 const fadeInUp = {
@@ -165,7 +166,7 @@ export default function TrainingPage() {
         {/* Background Pattern */}
         <div className="absolute inset-0 z-0 opacity-10">
           <Image 
-            src="https://images.unsplash.com/photo-1593113598332-cd59a93f9f81?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+            src={Spinach2} 
             alt="Training Background" 
             fill
             style={{ objectFit: 'cover' }}
@@ -497,10 +498,10 @@ export default function TrainingPage() {
               Whether you're looking to enhance your skills through our training programs or need expert consultancy services, we're here to help you succeed in agriculture.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Link href="/contact" className="btn bg-white text-primary hover:bg-neutral-100 text-lg px-8 py-3">
+              <Link href="/contact" className="btn bg-white text-primary hover:bg-neutral-100 text-lg px-8 py-3" style={{ position: 'relative', zIndex: 20, pointerEvents: 'auto' }}>
                 Contact Our Team
               </Link>
-              <Link href="/about" className="btn btn-outline border-white text-white hover:bg-white hover:text-primary text-lg px-8 py-3">
+              <Link href="/about" className="btn btn-outline border-white text-white hover:bg-white hover:text-primary text-lg px-8 py-3" style={{ position: 'relative', zIndex: 20, pointerEvents: 'auto' }}>
                 Learn More About Us
               </Link>
             </div>

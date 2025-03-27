@@ -53,7 +53,7 @@ export default function RootLayout({
         className={`${inter.variable} ${robotoMono.variable} antialiased`}
       >
         <Navbar />
-        <main className="min-h-screen">{children}</main>
+        <main className="min-h-screen" style={{ position: 'relative', zIndex: 1 }}>{children}</main>
         <Footer />
       </body>
     </html>
