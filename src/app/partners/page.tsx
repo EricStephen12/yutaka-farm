@@ -161,7 +161,7 @@ export default function PartnersPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
               >
-                Our Partners
+                Partnership Opportunities
               </motion.h1>
               
               <motion.div 
@@ -177,41 +177,151 @@ export default function PartnersPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.4 }}
               >
-                Collaboration is at the heart of our success. We work with leading organizations, educational institutions, and businesses to advance sustainable agriculture in Nigeria and beyond.
+                Collaboration is at the heart of our success. Whether you're interested in financial investment opportunities or distribution partnerships, we offer various ways to grow together in Nigeria's agricultural sector.
               </motion.p>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Featured Partners Section */}
+      {/* Financial Partnership Section - NEW SECTION */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 md:px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <motion.div 
+              className="relative h-[400px] lg:h-[500px] rounded-lg overflow-hidden shadow-xl"
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <Image 
+                src={Hydroponic3} 
+                alt="Financial Partnership" 
+                fill
+                style={{ objectFit: 'cover' }}
+              />
+            </motion.div>
+
+            <motion.div 
+              initial="initial"
+              whileInView="animate"
+              viewport={{ once: true }}
+              variants={staggerContainer}
+            >
+              <motion.h2 
+                className="text-3xl font-bold text-neutral-900 mb-4"
+                variants={fadeInUp}
+              >
+                Financial Partnership Opportunities
+              </motion.h2>
+              
+              <motion.div 
+                className="w-20 h-1 bg-primary mb-6"
+                variants={fadeInUp}
+              ></motion.div>
+              
+              <motion.p 
+                className="text-lg text-neutral-600 mb-6"
+                variants={fadeInUp}
+              >
+                Invest in Nigeria's agricultural future with Yutaka Farm. We offer various financial partnership opportunities for investors looking to support sustainable agriculture while achieving attractive returns.
+              </motion.p>
+
+              <div className="space-y-6">
+                <motion.div 
+                  className="flex"
+                  variants={fadeInUp}
+                >
+                  <div className="bg-primary/10 rounded-full w-12 h-12 flex items-center justify-center mr-4 shrink-0">
+                    <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-neutral-900 mb-1">Growth Investment</h3>
+                    <p className="text-neutral-600">
+                      Support our expansion into new agricultural markets and technologies with capital investment opportunities designed for growth-oriented investors.
+                    </p>
+                  </div>
+                </motion.div>
+                
+                <motion.div 
+                  className="flex"
+                  variants={fadeInUp}
+                >
+                  <div className="bg-primary/10 rounded-full w-12 h-12 flex items-center justify-center mr-4 shrink-0">
+                    <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-neutral-900 mb-1">Infrastructure Financing</h3>
+                    <p className="text-neutral-600">
+                      Participate in funding state-of-the-art agricultural facilities, from hydroponic greenhouses to processing centers, with defined returns on investment.
+                    </p>
+                  </div>
+                </motion.div>
+                
+                <motion.div 
+                  className="flex"
+                  variants={fadeInUp}
+                >
+                  <div className="bg-primary/10 rounded-full w-12 h-12 flex items-center justify-center mr-4 shrink-0">
+                    <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-neutral-900 mb-1">Strategic Partnerships</h3>
+                    <p className="text-neutral-600">
+                      Form a joint venture with us to develop new agricultural business lines, combining your capital with our expertise in the Nigerian market.
+                    </p>
+                  </div>
+                </motion.div>
+              </div>
+              
+              <motion.div 
+                className="mt-8"
+                variants={fadeInUp}
+              >
+                <Link href="/contact" className="btn btn-primary text-lg px-8 py-3" style={{ position: 'relative', zIndex: 10, pointerEvents: 'auto' }}>
+                  Discuss Partnership Opportunities
+                </Link>
+              </motion.div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Partners Section - MADE SMALLER */}
+      <section className="py-12 bg-neutral-50">
+        <div className="container mx-auto px-4 md:px-6">
           <motion.div 
-            className="text-center max-w-3xl mx-auto mb-12"
+            className="text-center max-w-3xl mx-auto mb-8"
             initial="initial"
             whileInView="animate"
             viewport={{ once: true }}
             variants={fadeInUp}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-neutral-900">Our Valued Business Partners</h2>
-            <div className="w-24 h-1 bg-primary mx-auto my-4"></div>
-            <p className="text-neutral-600 text-lg">
-              We're proud to collaborate with these exceptional businesses that help bring our premium agricultural products to customers across Nigeria
+            <h2 className="text-2xl md:text-3xl font-bold text-neutral-900">Our Current Business Partners</h2>
+            <div className="w-20 h-1 bg-primary mx-auto my-3"></div>
+            <p className="text-neutral-600">
+              We're proud to collaborate with these exceptional businesses across Nigeria
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4">
             {partners.map((partner, index) => (
               <motion.div 
                 key={partner.id}
-                className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow h-full"
-                initial={{ opacity: 0, y: 20 }}
+                className="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow h-full"
+                initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.05 }}
+                transition={{ duration: 0.4, delay: index * 0.03 }}
               >
-                <div className="relative h-44 bg-neutral-100 flex items-center justify-center p-4">
+                <div className="relative h-32 bg-neutral-100 flex items-center justify-center p-4">
                   <Image 
                     src={partner.logo} 
                     alt={partner.name} 
@@ -219,16 +329,8 @@ export default function PartnersPage() {
                     style={{ objectFit: 'cover' }}
                   />
                 </div>
-                <div className="p-5">
-                  <div className="flex items-center justify-between mb-3">
-                    <h3 className="text-lg font-bold text-primary">{partner.name}</h3>
-                    <span className="text-xs font-medium text-white bg-primary px-2 py-1 rounded-full">
-                      {partner.category}
-                    </span>
-                  </div>
-                  <p className="text-neutral-600 text-sm">
-                    {partner.description}
-                  </p>
+                <div className="p-3">
+                  <h3 className="text-sm font-bold text-primary text-center">{partner.name}</h3>
                 </div>
               </motion.div>
             ))}
@@ -237,7 +339,7 @@ export default function PartnersPage() {
       </section>
 
       {/* Partnership Benefits Section */}
-      <section className="py-16 bg-neutral-100">
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div 
@@ -287,9 +389,9 @@ export default function PartnersPage() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-neutral-900 mb-1">Reliable Supply Chain</h3>
+                    <h3 className="text-lg font-semibold text-neutral-900 mb-1">Competitive Returns</h3>
                     <p className="text-neutral-600">
-                      We ensure consistent and timely delivery of products to our retail partners, with flexible scheduling and volume options to meet your specific needs.
+                      Financial partners enjoy structured returns on their investment while supporting sustainable agriculture in Nigeria's growing market.
                     </p>
                   </div>
                 </motion.div>
@@ -321,9 +423,9 @@ export default function PartnersPage() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-neutral-900 mb-1">Marketing Support</h3>
+                    <h3 className="text-lg font-semibold text-neutral-900 mb-1">Impact Investment</h3>
                     <p className="text-neutral-600">
-                      We provide our partners with promotional materials and product information to help showcase our premium produce and increase customer engagement.
+                      Your partnership helps develop sustainable agriculture in Nigeria, creating jobs and improving food security while generating financial returns.
                     </p>
                   </div>
                 </motion.div>
@@ -348,35 +450,32 @@ export default function PartnersPage() {
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section className="py-16 bg-white">
+      {/* Testimonials Section - MADE SMALLER */}
+      <section className="py-12 bg-neutral-50">
         <div className="container mx-auto px-4 md:px-6">
           <motion.div 
-            className="text-center max-w-3xl mx-auto mb-12"
+            className="text-center max-w-3xl mx-auto mb-8"
             initial="initial"
             whileInView="animate"
             viewport={{ once: true }}
             variants={fadeInUp}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-neutral-900">Partner Testimonials</h2>
-            <div className="w-24 h-1 bg-primary mx-auto my-4"></div>
-            <p className="text-neutral-600 text-lg">
-              What our partners say about working with Yutaka Farm
-            </p>
+            <h2 className="text-2xl md:text-3xl font-bold text-neutral-900">Partner Testimonials</h2>
+            <div className="w-20 h-1 bg-primary mx-auto my-3"></div>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {testimonials.map((testimonial, index) => (
               <motion.div 
                 key={testimonial.id}
-                className="bg-neutral-50 rounded-lg p-6 shadow-md"
+                className="bg-white rounded-lg p-5 shadow-sm"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <div className="flex items-center mb-4">
-                  <div className="relative w-16 h-16 rounded-full overflow-hidden mr-4">
+                <div className="flex items-center mb-3">
+                  <div className="relative w-12 h-12 rounded-full overflow-hidden mr-3">
                     <Image 
                       src={testimonial.image} 
                       alt={testimonial.name} 
@@ -385,21 +484,21 @@ export default function PartnersPage() {
                     />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-neutral-900">{testimonial.name}</h3>
-                    <p className="text-neutral-500 text-sm">{testimonial.position}</p>
+                    <h3 className="text-base font-semibold text-neutral-900">{testimonial.name}</h3>
+                    <p className="text-neutral-500 text-xs">{testimonial.position}</p>
                   </div>
                 </div>
-                <svg className="w-10 h-10 text-primary/20 mb-2" fill="currentColor" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                <svg className="w-8 h-8 text-primary/20 mb-2" fill="currentColor" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
                   <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
                 </svg>
-                <p className="text-neutral-600 italic leading-relaxed">"{testimonial.quote}"</p>
+                <p className="text-neutral-600 text-sm italic leading-relaxed">{testimonial.quote.length > 120 ? `${testimonial.quote.substring(0, 120)}...` : testimonial.quote}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Become a Partner Section */}
+      {/* Become a Partner Section - UPDATED */}
       <section className="py-20 bg-primary text-white">
         <div className="container mx-auto px-4 md:px-6">
           <motion.div 
@@ -409,15 +508,15 @@ export default function PartnersPage() {
             viewport={{ once: true }}
             variants={fadeInUp}
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Interested in Becoming a Partner?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Interested in a Financial Partnership?</h2>
             <p className="text-xl text-white/90 mb-8">
-              Join our network of partners and discover how we can grow together. We're always looking for strategic collaborations that advance sustainable agriculture.
+              Join our growing network of financial partners and discover how we can grow together while advancing sustainable agriculture in Nigeria and Africa.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Link href="/contact" className="btn bg-white text-primary hover:bg-neutral-100 text-lg px-8 py-3">
-                Contact Us
+              <Link href="/contact" className="btn bg-white text-primary hover:bg-neutral-100 text-lg px-8 py-3" style={{ position: 'relative', zIndex: 10, pointerEvents: 'auto' }}>
+                Schedule a Consultation
               </Link>
-              <Link href="/wholesale" className="btn btn-outline border-white text-white hover:bg-white hover:text-primary text-lg px-8 py-3">
+              <Link href="/wholesale" className="btn btn-outline border-white text-white hover:bg-white hover:text-primary text-lg px-8 py-3" style={{ position: 'relative', zIndex: 10, pointerEvents: 'auto' }}>
                 Wholesale Inquiry
               </Link>
             </div>
